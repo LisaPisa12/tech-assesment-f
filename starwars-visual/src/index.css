@@ -1,9 +1,12 @@
+@import url(https://allfont.net/allfont.css?fonts=star-jedi);
+
 body {
   margin: 0;
   height: 100vh;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  text-align: center;
+  background: #111;
+  color: #fff;
+  font-family: "Star Jedi", arial;
+  padding-top: 80px;
+  padding-bottom: 50px;
 }
