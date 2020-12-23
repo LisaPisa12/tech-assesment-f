@@ -7,10 +7,11 @@
   background: #111;
   padding: 0 7.5vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   box-sizing: border-box;
 }
 
 .navbar_logo {
   height: 100%;
+  width: 50%;
 }

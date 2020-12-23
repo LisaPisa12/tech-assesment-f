@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import Film from "../Film";
+
 import "./styles.css";
 
 export default ({ films }) => {
