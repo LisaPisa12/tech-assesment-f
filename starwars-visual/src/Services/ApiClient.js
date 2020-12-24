@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const BASE_URL = "https://swapi.dev/api";
 
 export default {

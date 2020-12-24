@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FilmList from "./Components/FilmList";
 import FavoriteFilms from "./Components/FavoriteFilms";
 import FavoriteCharacters from "./Components/FavoriteCharacters";
+import FilmInformation from "./Components/FilmInformation";
 import Spinner from "./Components/Spinner";
 import Navbar from "./Components/Navbar";
 import ApiClient from "./Services/ApiClient";
@@ -13,13 +14,13 @@ import { GlobalProvider } from "./Context/GlobalState";
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [films, setFilms] = useState([]);
-  const [people, setPeople] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     ApiClient.getFilms()
       .then((data) => setFilms(data.results))
       .then(setLoading(false));
-    // ApiClient.getCharacters().then((data) => setPeople(data.results));
+    //ApiClient.getCharacters().then((data) => setCharacters(data.results));
   }, []);
 
   return (
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/FavoriteCharacters">
             <FavoriteCharacters />
           </Route>
+          <Route path="/filmInformation" component={FilmInformation}></Route>
         </Switch>
       </Router>
     </GlobalProvider>
