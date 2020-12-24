@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../Context/GlobalState";
+import ApiClient from "../../Services/ApiClient";
 import moment from "moment";
 
 export default (props) => {
@@ -10,6 +11,14 @@ export default (props) => {
     (element) => element.id === film.id
   );
   const disabled = savedFavoriteFilm ? true : false;
+
+  useEffect(() => {
+    film.characters = film.characters.map(async (character) => {
+      const data = await ApiClient.getCharacter(character);
+      console.log(data);
+      return data;
+    });
+  }, []);
 
   return (
     <div className="film_container">

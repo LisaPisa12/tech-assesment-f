@@ -8,6 +8,11 @@ export default {
   getCharacters: () => {
     return fetchRequest(`people`);
   },
+  getCharacter: async (character) => {
+    const characterURL = new URL(character);
+    const data = await fetch(characterURL);
+    return data.json();
+  },
 };
 
 const fetchRequest = (url) => {
