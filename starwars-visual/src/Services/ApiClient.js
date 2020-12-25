@@ -10,8 +10,8 @@ export default {
   },
   getCharacter: async (character) => {
     const characterURL = new URL(character);
-    const data = await fetch(characterURL);
-    return data.json();
+    const res = await fetch(characterURL);
+    const data = await res.json();
   },
 };
 

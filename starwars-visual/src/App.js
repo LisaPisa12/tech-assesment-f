@@ -14,12 +14,24 @@ import { GlobalProvider } from "./Context/GlobalState";
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [films, setFilms] = useState([]);
-  const [characters, setCharacters] = useState([]);
 
+  //change to Services folder
   useEffect(() => {
-    ApiClient.getFilms()
-      .then((data) => setFilms(data.results))
-      .then(setLoading(false));
+    async function fetchFilms() {
+      try {
+        let res = await fetch("https://swapi.dev/api/films/");
+        let data = await res.json();
+        setFilms(data.results);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchFilms();
+    // ApiClient.getFilms()
+    //   .then((data) => setFilms(data.results))
+    //   .then(setLoading(false));
     //ApiClient.getCharacters().then((data) => setCharacters(data.results));
   }, []);
 

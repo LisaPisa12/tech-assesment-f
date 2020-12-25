@@ -1,7 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../Context/GlobalState";
 import ApiClient from "../../Services/ApiClient";
+import "./styles.css";
+import Character from "../Character";
 import moment from "moment";
 
 export default (props) => {
@@ -12,13 +14,32 @@ export default (props) => {
   );
   const disabled = savedFavoriteFilm ? true : false;
 
+  const [characters, setCharacters] = useState([]);
+
   useEffect(() => {
-    film.characters = film.characters.map(async (character) => {
-      const data = await ApiClient.getCharacter(character);
-      console.log(data);
-      return data;
-    });
+    fetchCharacters();
   }, []);
+
+  async function fetchCharacters() {
+    try {
+      const response = await Promise.all(
+        film.characters.map((character) =>
+          fetch(character).then((res) => res.json())
+        )
+      );
+      setCharacters(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  // useEffect(() => {
+  //   film.characters = film.characters.map(async (character) => {
+  //     const data = await ApiClient.getCharacter(character);
+  //     return data;
+  //   });
+  //   setCharacters(film.characters);
+  // }, []);
 
   return (
     <div className="film_container">
@@ -48,13 +69,11 @@ export default (props) => {
           Release Date: {moment(film.release_date).format("LL")}
         </h3>
       </div>
-      <div className="film_characters">
-        <h3 className="film_chracters">
-          CHARACTER:
-          {film.characters[0]}
-        </h3>
+      <div className="char_div">
+        {characters.map((character, i) => {
+          return <Character key={i} character={character}></Character>;
+        })}
       </div>
-
       <button disabled={disabled} onClick={() => addToFavoriteFilms(film)}>
         Add to Fav
       </button>

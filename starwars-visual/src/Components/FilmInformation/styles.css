@@ -1,0 +1,7 @@
+.char_div {
+  border: 2px solid white;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+}

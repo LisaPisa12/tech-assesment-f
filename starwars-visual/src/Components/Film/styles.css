@@ -1,11 +1,20 @@
 .film_container {
-  height: 50vh;
+  height: 100%;
   width: 80%;
   border: 2px solid white;
   margin-bottom: 10px;
+  margin-left: 35px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .film_container img {
+  padding-top: 10px;
   height: 80%;
   width: 60%;
+}
+
+.film_container p {
+  text-align: left;
+  padding: 5%;
 }
