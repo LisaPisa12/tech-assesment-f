@@ -15,7 +15,11 @@ export default ({ film }) => {
         <div className="film_headline">
           <h3 className="film_title">{film.title}</h3>
         </div>
-        <img className="film_image" alt="" src={`/images/films/1.jpg`} />
+        <img
+          className="film_image"
+          alt=""
+          src={`/images/films/${film.episode_id}.jpg`}
+        />
       </div>
     </Link>
   );

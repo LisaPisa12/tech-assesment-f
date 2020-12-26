@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../Context/GlobalState";
 import "./styles.css";
 
-export default ({ character, id }) => {
+export default ({ character }) => {
   const { addToFavoriteCharacters, favoriteCharacters } = useContext(
     GlobalContext
   );
@@ -12,11 +12,19 @@ export default ({ character, id }) => {
   );
   const disabled = savedFavoriteChar ? true : false;
 
+  const getIdFromUrl = function (value) {
+    let id = value.match(/([0-9])+/g);
+    id = id[0];
+    return id;
+  };
+
   return (
     <div className="film_characters">
       <div className="char_img">
         <img
-          src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}
+          src={`https://starwars-visualguide.com/assets/img/characters/${getIdFromUrl(
+            character.url
+          )}.jpg`}
           alt=""
         ></img>
       </div>
