@@ -35,8 +35,8 @@ const App = () => {
       <Router>
         <Navbar />
         <Switch>
-          <div className="film_list">
-            <Route exact path="/">
+          <Route exact path="/">
+            <div className="film_list">
               {!loading ? (
                 films.map((film) => <Film film={film} />)
               ) : (
@@ -44,15 +44,16 @@ const App = () => {
                   <Spinner />
                 </div>
               )}
-            </Route>
-          </div>
+            </div>
+          </Route>
+
           <Route path="/FavoriteFilms">
             <FavoriteFilms />
           </Route>
           <Route path="/FavoriteCharacters">
             <FavoriteCharacters />
           </Route>
-          <Route path="/filmInformation" component={FilmInformation}></Route>
+          <Route path="/FilmInformation" component={FilmInformation}></Route>
         </Switch>
       </Router>
     </GlobalProvider>

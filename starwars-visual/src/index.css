@@ -1,5 +1,8 @@
 @import url(https://allfont.net/allfont.css?fonts=star-jedi);
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   height: 100vh;
@@ -30,4 +33,10 @@ button:disabled,
 button[disabled] {
   background-color: #cccccc;
   color: #666666;
+}
+
+.film_list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100px;
 }
