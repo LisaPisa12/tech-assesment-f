@@ -1,13 +1,12 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import FilmList from "./Components/FilmList";
+import Film from "./Components/Film";
 import FavoriteFilms from "./Components/FavoriteFilms";
 import FavoriteCharacters from "./Components/FavoriteCharacters";
 import FilmInformation from "./Components/FilmInformation";
 import Spinner from "./Components/Spinner";
 import Navbar from "./Components/Navbar";
-import ApiClient from "./Services/ApiClient";
 
 import { GlobalProvider } from "./Context/GlobalState";
 
@@ -29,10 +28,6 @@ const App = () => {
     }
 
     fetchFilms();
-    // ApiClient.getFilms()
-    //   .then((data) => setFilms(data.results))
-    //   .then(setLoading(false));
-    //ApiClient.getCharacters().then((data) => setCharacters(data.results));
   }, []);
 
   return (
@@ -42,7 +37,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             {!loading ? (
-              <FilmList films={films}></FilmList>
+              films.map((film) => <Film film={film}></Film>)
             ) : (
               <div className="App_loader">
                 <Spinner />

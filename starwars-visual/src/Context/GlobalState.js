@@ -33,7 +33,7 @@ export const GlobalProvider = (props) => {
   };
 
   const addToFavoriteCharacters = (character) => {
-    dispatch({ type: "ADD_MOVIE_TO_FAVORITES", payload: character });
+    dispatch({ type: "ADD_CHARACTER_TO_FAVORITES", payload: character });
   };
 
   return (

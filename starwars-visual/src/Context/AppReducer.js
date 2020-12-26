@@ -12,6 +12,14 @@ export default (state, action) => {
         ...state,
         favoriteCharacters: [action.payload, ...state.favoriteCharacters],
       };
+    // case "REMOVE_FILMS_FROM_FAVORITES":
+    //   return {
+    //     ...state,
+    //     favoriteFilms: state.favoriteFilms.filter(
+    //       (film) => film.id !== action.payload
+    //     ),
+    //   };
+
     default:
       return state;
   }

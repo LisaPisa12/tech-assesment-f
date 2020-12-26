@@ -9,7 +9,6 @@ export default () => {
     <div className="container">
       <div className="header">
         <h1 className="heading">My Favorites</h1>
-
         <span className="film-count">
           {favoriteFilms.length} {favoriteFilms.length === 1 ? "Film" : "Films"}
         </span>

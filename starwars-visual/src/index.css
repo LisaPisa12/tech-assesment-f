@@ -9,4 +9,20 @@ body {
   font-family: "Star Jedi", arial;
   padding-top: 80px;
   padding-bottom: 50px;
+  font-family: "Star Jedi", arial;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  border-radius: 10%;
+  color: #111;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
 }

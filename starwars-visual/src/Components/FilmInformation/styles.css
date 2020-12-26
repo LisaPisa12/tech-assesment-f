@@ -5,3 +5,13 @@
   overflow-y: hidden;
   overflow-x: auto;
 }
+
+.film_info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.film_container button {
+  margin: 15px;
+}
