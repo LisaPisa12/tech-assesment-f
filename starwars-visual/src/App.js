@@ -35,15 +35,17 @@ const App = () => {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/">
-            {!loading ? (
-              films.map((film) => <Film film={film}></Film>)
-            ) : (
-              <div className="App_loader">
-                <Spinner />
-              </div>
-            )}
-          </Route>
+          <div className="film_list">
+            <Route exact path="/">
+              {!loading ? (
+                films.map((film) => <Film film={film} />)
+              ) : (
+                <div className="App_loader">
+                  <Spinner />
+                </div>
+              )}
+            </Route>
+          </div>
           <Route path="/FavoriteFilms">
             <FavoriteFilms />
           </Route>
