@@ -20,11 +20,12 @@ export default ({ character, id }) => {
           alt=""
         ></img>
       </div>
-      <div className="char_name">Character Name:{character.name}</div>
+
       <div className="char_description">
-        Height: {character.height}
-        Mass: {character.mass}
-        Hair Color: {character.hair_color}
+        <h4>Name:{character.name}</h4>
+        <h4> Height: {character.height}</h4>
+        <h4> Mass: {character.mass}</h4>
+        <h4> Hair Color: {character.hair_color}</h4>
       </div>
       <button
         disabled={disabled}

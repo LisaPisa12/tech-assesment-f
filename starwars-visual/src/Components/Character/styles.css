@@ -1,7 +1,16 @@
 .film_characters {
   border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
 }
 .char_img img {
   border-radius: 50%;
   width: 50%;
+}
+
+.char_description h4 {
+  display: flex;
+  margin: 0px;
+  align-items: flex-start;
 }
