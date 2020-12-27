@@ -6,20 +6,16 @@ import Film from "../Film";
 export default () => {
   const { favoriteFilms } = useContext(GlobalContext);
   return (
-    <div className="container">
-      <div className="header">
+    <div className="films_container">
+      {/* <div className="header">
         <h1 className="heading">My Favorites</h1>
         <span className="film-count">
           {favoriteFilms.length} {favoriteFilms.length === 1 ? "Film" : "Films"}
         </span>
-      </div>
+      </div> */}
 
       {favoriteFilms.length > 0 ? (
-        <div className="film_list">
-          {favoriteFilms.map((film) => (
-            <Film film={film} key={film.episode_id} />
-          ))}
-        </div>
+        favoriteFilms.map((film) => <Film film={film} key={film.episode_id} />)
       ) : (
         <h2 className="no-films">You have no favorites</h2>
       )}
