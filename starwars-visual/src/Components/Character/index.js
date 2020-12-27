@@ -19,6 +19,28 @@ export default ({ character }) => {
   };
 
   return (
+    // <Card>
+    //   <Image
+    //     size="tiny"
+    //     src={`https://starwars-visualguide.com/assets/img/characters/${getIdFromUrl(
+    //       character.url
+    //     )}.jpg`}
+    //   ></Image>
+    //   <Card.Content>
+    //     <Card.Header>{character.name}</Card.Header>
+    //     <Card.Description>
+    //       <h3> Height:</h3> {character.height}
+    //       <h3> Mass:</h3> {character.mass}
+    //       <h3>Hair Color:</h3> {character.hair_color}
+    //     </Card.Description>
+    //   </Card.Content>
+    //   <Card.Content extra>
+    //     <Button
+    //       disabled={disabled}
+    //       onClick={() => addToFavoriteCharacters(character)}
+    //     ></Button>
+    //   </Card.Content>
+    // </Card>
     <div className="film_characters">
       <div className="char_img">
         <img

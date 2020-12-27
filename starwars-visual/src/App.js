@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Film from "./Components/Film";
@@ -14,7 +13,6 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [films, setFilms] = useState([]);
 
-  //change to Services folder
   useEffect(() => {
     async function fetchFilms() {
       try {
@@ -36,17 +34,18 @@ const App = () => {
         <Navbar />
         <Switch>
           <Route exact path="/">
-            <div className="film_list">
-              {!loading ? (
-                films.map((film) => <Film film={film} />)
-              ) : (
-                <div className="App_loader">
-                  <Spinner />
-                </div>
-              )}
-            </div>
+            {!loading ? (
+              <div className="film_list">
+                {films.map((film) => (
+                  <Film film={film} />
+                ))}
+              </div>
+            ) : (
+              <div className="App_loader">
+                <Spinner />
+              </div>
+            )}
           </Route>
-
           <Route path="/FavoriteFilms">
             <FavoriteFilms />
           </Route>

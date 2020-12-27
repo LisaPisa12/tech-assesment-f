@@ -1,18 +1,29 @@
 @import url(https://allfont.net/allfont.css?fonts=star-jedi);
-
+/* @import "semantic-ui-css/semantic.min.css"; */
 * {
   box-sizing: border-box;
 }
+
+html,
 body {
   margin: 0;
   height: 100vh;
   text-align: center;
-  background: #111;
-  color: #fff;
+  color: white;
+  /* display: flex;
+
+  justify-content: center;
+  align-items: center;
   font-family: "Star Jedi", arial;
   padding-top: 80px;
-  padding-bottom: 50px;
+  padding-bottom: 50px; */
   font-family: "Star Jedi", arial;
+  background: url("https://images.unsplash.com/photo-1549189189-c26639dfc999?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 a {
   text-decoration: none;
@@ -34,9 +45,10 @@ button[disabled] {
   background-color: #cccccc;
   color: #666666;
 }
-
 .film_list {
+  padding: 10%;
   display: flex;
   flex-wrap: wrap;
-  min-width: 100px;
+  align-content: flex-start;
+  overflow: hidden;
 }

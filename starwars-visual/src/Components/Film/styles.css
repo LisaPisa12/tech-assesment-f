@@ -18,11 +18,3 @@
 .film_container p {
   text-align: left;
 }
-
-.film_list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-shrink: 0;
-  padding: 10%;
-}

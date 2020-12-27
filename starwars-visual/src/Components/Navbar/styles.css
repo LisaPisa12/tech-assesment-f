@@ -4,7 +4,7 @@
   top: 0;
   height: 9vh;
   width: 100vw;
-  background: #111;
+  background: rgb(0, 0, 4);
   padding: 0 7.5vh;
   display: flex;
   justify-content: space-around;
@@ -12,7 +12,8 @@
   align-items: center;
 }
 
-.navbar_logo {
-  height: 100%;
-  width: 50%;
+@media screen and (max-width: 480px) {
+  .content {
+    height: auto !important;
+  }
 }
