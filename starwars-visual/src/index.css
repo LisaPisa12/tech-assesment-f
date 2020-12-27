@@ -45,3 +45,7 @@ button[disabled] {
   align-content: flex-start;
   overflow: hidden;
 }
+
+.container {
+  padding-top: 20%;
+}
