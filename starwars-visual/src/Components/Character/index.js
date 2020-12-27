@@ -19,7 +19,7 @@ export default ({ character }) => {
   };
 
   return (
-    <div className="film_characters">
+    <div className="film_container">
       <div className="char_img">
         <img
           src={`https://starwars-visualguide.com/assets/img/characters/${getIdFromUrl(
