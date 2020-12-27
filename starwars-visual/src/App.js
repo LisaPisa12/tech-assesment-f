@@ -35,7 +35,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             {!loading ? (
-              <div className="container">
+              <div className="film_list">
                 {films.map((film) => (
                   <Film film={film} />
                 ))}

@@ -47,5 +47,11 @@ button[disabled] {
 }
 
 .container {
-  padding-top: 20%;
+  padding-top: 10%;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding-top: 20%;
+  }
 }
