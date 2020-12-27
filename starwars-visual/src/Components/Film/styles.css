@@ -1,4 +1,4 @@
-.film_container {
+/* .film_container {
   height: 100%;
   width: 80%;
   border: 2px solid gray;
@@ -17,4 +17,9 @@
 
 .film_container p {
   text-align: left;
+} */
+
+.film {
+  font-size: 1.5rem;
+  flex: 1;
 }

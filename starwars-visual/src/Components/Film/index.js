@@ -11,6 +11,7 @@ export default ({ film }) => {
         pathname: "/FilmInformation",
         state: { film },
       }}
+      className="film"
     >
       <div className="film_container">
         <div className="film_headline">

@@ -8,7 +8,6 @@ html,
 body {
   margin: 0;
   height: 100vh;
-  text-align: center;
   color: white;
   font-family: "Star Jedi", arial;
   background: url("https://images.unsplash.com/photo-1549189189-c26639dfc999?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80")
@@ -38,7 +37,19 @@ button[disabled] {
   background-color: #cccccc;
   color: #666666;
 }
-.film_list {
+
+.films_container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* @media screen and (max-width: 450px) {
+  .films_container {
+    flex-direction: column;
+  }
+} */
+/* .film_list {
   padding: 10%;
   display: flex;
   flex-wrap: wrap;
@@ -54,4 +65,4 @@ button[disabled] {
   .container {
     padding-top: 20%;
   }
-}
+} */
