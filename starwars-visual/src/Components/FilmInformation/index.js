@@ -36,33 +36,6 @@ export default (props) => {
   }
 
   return (
-    // <>
-    //   <Card>
-    //     <Image
-    //       src={`/images/films/${film.episode_id}.jpg`}
-    //       wrapped
-    //       ui={false}
-    //     />
-    //     <Card.Content>
-    //       <Card.Header>{film.title}</Card.Header>
-    //       <Card.Description>Episode ID: {film.episode_id}</Card.Description>
-    //       <Card.Description>
-    //         Release Date: {moment(film.release_date).format("LL")}
-    //       </Card.Description>
-    //       <Button disabled={disabled} onClick={() => addToFavoriteFilms(film)}>
-    //         Add to Fav
-    //       </Button>
-    //       <Card.Description>Director: {film.director}</Card.Description>
-    //       <Card.Description>Producer: {film.producer}</Card.Description>
-    //       <Card.Description>{film.opening_crawl}</Card.Description>
-    //     </Card.Content>
-    //   </Card>
-    //   <Grid column={3}>
-    //     {characters.map((character) => {
-    //       return <Character character={character}></Character>;
-    //     })}
-    //   </Grid>
-    // </>
     <div className="film_container">
       <img
         className="film_image"

@@ -10,13 +10,6 @@ body {
   height: 100vh;
   text-align: center;
   color: white;
-  /* display: flex;
-
-  justify-content: center;
-  align-items: center;
-  font-family: "Star Jedi", arial;
-  padding-top: 80px;
-  padding-bottom: 50px; */
   font-family: "Star Jedi", arial;
   background: url("https://images.unsplash.com/photo-1549189189-c26639dfc999?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1234&q=80")
     no-repeat center center fixed;
