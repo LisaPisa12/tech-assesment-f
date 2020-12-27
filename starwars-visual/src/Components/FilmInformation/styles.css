@@ -6,20 +6,27 @@
   overflow-x: auto;
 }
 
-.film_info {
+.film_info_container {
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  width: 100%;
+  margin-top: 10%;
+  padding-left: 10%;
 }
 
-.film_container button {
-  margin: 15px;
+.film_info_left {
+  flex: 1;
+}
+.film_info_left img {
+  align-self: center;
 }
 
-.film_info h3 {
-  margin: 5px;
+.film_info_right {
+  flex: 1;
+  padding: 10%;
 }
-.film_container {
-  margin-top: 20%;
-  margin-left: 10%;
-}
+
+@media screen and (max-width: 768px) {
+  .film_info_container {
+    flex-direction: column;
+  }
+} /* .film_info { width: 100%; display: flex; } .film_container button { margin: 15px; } .film_info h3 { margin: 5px; } .film_container { margin-top: 20%; margin-left: 10%; } .film_info_second { flex-direction: column; } @media screen and (max-width: 450px) { } */ ;

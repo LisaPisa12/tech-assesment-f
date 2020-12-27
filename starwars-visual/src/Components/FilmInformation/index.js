@@ -36,32 +36,63 @@ export default (props) => {
   }
 
   return (
-    <div className="film_container">
-      <img
-        className="film_image"
-        alt=""
-        src={`/images/films/${film.episode_id}.jpg`}
-      />
-      <button disabled={disabled} onClick={() => addToFavoriteFilms(film)}>
-        Add to Fav
-      </button>
-      <div className="film_info">
-        <h3 className="film_title">{film.title}</h3>
-        <h3 className="film_id">Episode ID: {film.episode_id}</h3>
-        <h3 className="film_release">
-          Release Date: {moment(film.release_date).format("LL")}
-        </h3>
-        <h3 className="film_dir">Director: {film.director}</h3>
-        <h3 className="film_pro">Producer: {film.producer}</h3>
+    <>
+      <div className="film_info_container">
+        <div className="film_info_left">
+          <img
+            className="film_image"
+            alt=""
+            src={`/images/films/${film.episode_id}.jpg`}
+          />
+        </div>
+        <div className="film_info_right">
+          <button disabled={disabled} onClick={() => addToFavoriteFilms(film)}>
+            Add to Fav
+          </button>
+          <h3 className="film_title">{film.title}</h3>
+          <h3 className="film_id">Episode ID: {film.episode_id}</h3>
+          <h3 className="film_release">
+            Release Date: {moment(film.release_date).format("LL")}
+          </h3>
+          <h3 className="film_dir">Director: {film.director}</h3>
+          <h3 className="film_pro">Producer: {film.producer}</h3>
 
-        <h3 className="film_crawl">Opening Crawl:</h3>
-        <p> {film.opening_crawl}</p>
+          <h3 className="film_crawl">Opening Crawl:</h3>
+          <p> {film.opening_crawl}</p>
+        </div>
       </div>
+      {/* <div className="film_info">
+        <h2>Film Info</h2>
+
+        <di className="film_info_first">
+          <img
+            className="film_image"
+            alt=""
+            src={`/images/films/${film.episode_id}.jpg`}
+          />
+        </di>
+        <div className="film_info_second">
+          <button disabled={disabled} onClick={() => addToFavoriteFilms(film)}>
+            Add to Fav
+          </button>
+          <h3 className="film_title">{film.title}</h3>
+          <h3 className="film_id">Episode ID: {film.episode_id}</h3>
+          <h3 className="film_release">
+            Release Date: {moment(film.release_date).format("LL")}
+          </h3>
+          <h3 className="film_dir">Director: {film.director}</h3>
+          <h3 className="film_pro">Producer: {film.producer}</h3>
+
+          <h3 className="film_crawl">Opening Crawl:</h3>
+          <p> {film.opening_crawl}</p>
+        </div>
+      </div> */}
       <div className="char_div">
         {characters.map((character) => {
           return <Character character={character}></Character>;
         })}
       </div>
-    </div>
+      {/* </div> */}
+    </>
   );
 };

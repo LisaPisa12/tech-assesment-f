@@ -6,21 +6,26 @@ import Character from "../Character";
 export default () => {
   const { favoriteCharacters } = useContext(GlobalContext);
   return (
-    <div className="films_container">
-      {/* <div className="header">
+    <>
+      <div className="header">
         <h1 className="heading">My Favorites</h1>
         <span className="character-count">
           {favoriteCharacters.length}{" "}
           {favoriteCharacters.length === 1 ? "Character" : "Characters"}
         </span>
-      </div> */}
+      </div>
+
       {favoriteCharacters.length > 0 ? (
-        favoriteCharacters.map((character, i) => (
-          <Character character={character} key={i} />
-        ))
+        <div className="films_container">
+          {favoriteCharacters.map((character, i) => (
+            <Character character={character} key={i} />
+          ))}
+        </div>
       ) : (
-        <h2 className="no-films">You have no favorites</h2>
+        <div className="header">
+          <h2 className="no-films">You have no favorites</h2>
+        </div>
       )}
-    </div>
+    </>
   );
 };
