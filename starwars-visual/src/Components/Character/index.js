@@ -34,13 +34,13 @@ export default ({ character }) => {
         <h4> Height: {character.height}</h4>
         <h4> Mass: {character.mass}</h4>
         <h4> Hair Color: {character.hair_color}</h4>
+        <button
+          disabled={disabled}
+          onClick={() => addToFavoriteCharacters(character)}
+        >
+          Add to Favorites
+        </button>
       </div>
-      <button
-        disabled={disabled}
-        onClick={() => addToFavoriteCharacters(character)}
-      >
-        Add to Favorites
-      </button>
     </div>
   );
 };

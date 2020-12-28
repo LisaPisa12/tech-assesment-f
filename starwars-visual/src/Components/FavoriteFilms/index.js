@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../Context/GlobalState";
 import Film from "../Film";
+import "./styles.css";
 
 export default () => {
   const { favoriteFilms } = useContext(GlobalContext);
@@ -15,7 +16,7 @@ export default () => {
       </div>
 
       {favoriteFilms.length > 0 ? (
-        <div className="films_container">
+        <div className="main_container favorite">
           {favoriteFilms.map((film) => (
             <Film film={film} key={film.episode_id} />
           ))}

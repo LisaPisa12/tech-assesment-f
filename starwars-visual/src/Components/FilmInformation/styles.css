@@ -20,12 +20,18 @@
 }
 
 .film_info_right {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 10%;
+  margin: 0;
+}
+.film_info_right p {
+  text-align: left;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .film_info_container {
     flex-direction: column;
   }
-} /* .film_info { width: 100%; display: flex; } .film_container button { margin: 15px; } .film_info h3 { margin: 5px; } .film_container { margin-top: 20%; margin-left: 10%; } .film_info_second { flex-direction: column; } @media screen and (max-width: 450px) { } */ ;
+}

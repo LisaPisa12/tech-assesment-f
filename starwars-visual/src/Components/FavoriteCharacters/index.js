@@ -16,7 +16,7 @@ export default () => {
       </div>
 
       {favoriteCharacters.length > 0 ? (
-        <div className="films_container">
+        <div className="main_container favorite">
           {favoriteCharacters.map((character, i) => (
             <Character character={character} key={i} />
           ))}
