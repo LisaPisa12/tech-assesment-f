@@ -19,7 +19,7 @@ export default ({ character }) => {
   };
 
   return (
-    <div className="film_container">
+    <div className="char_container">
       <div className="char_img film_info_left ">
         <img
           src={`https://starwars-visualguide.com/assets/img/characters/${getIdFromUrl(
@@ -36,6 +36,7 @@ export default ({ character }) => {
         <h4> Mass: {character.mass}</h4>
         <h4> Hair Color: {character.hair_color}</h4>
         <button
+          className="char_button"
           disabled={disabled}
           onClick={() => addToFavoriteCharacters(character)}
         >

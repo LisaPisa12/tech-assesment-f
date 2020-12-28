@@ -8,6 +8,16 @@
 .char_description h4 {
   margin: 0;
 }
+
+.char_button {
+  position: relative;
+  bottom: 5%;
+  font-size: 1em;
+}
+
+.char_container {
+  margin: 10px;
+}
 /* .film_characters {
   border: 2px solid white;
   display: flex;
