@@ -37,7 +37,7 @@ const App = () => {
             {!loading ? (
               <div className="main_container">
                 {films.map((film) => (
-                  <Film film={film} />
+                  <Film film={film} key={film.episode_id} />
                 ))}
               </div>
             ) : (

@@ -7,7 +7,7 @@ import Character from "../Character";
 import moment from "moment";
 
 export default (props) => {
-  const { film, id } = props.location.state;
+  const { film } = props.location.state;
 
   const { addToFavoriteFilms, favoriteFilms } = useContext(GlobalContext);
 
@@ -19,21 +19,20 @@ export default (props) => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    fetchCharacters();
-  }, []);
-
-  async function fetchCharacters() {
-    try {
-      const response = await Promise.all(
-        film.characters.map((character) =>
-          fetch(character).then((res) => res.json())
-        )
-      );
-      setCharacters(response);
-    } catch (error) {
-      console.log(error);
+    async function fetchCharacters() {
+      try {
+        const response = await Promise.all(
+          film.characters.map((character) =>
+            fetch(character).then((res) => res.json())
+          )
+        );
+        setCharacters(response);
+      } catch (error) {
+        console.log(error);
+      }
     }
-  }
+    fetchCharacters();
+  }, [film.characters]);
 
   return (
     <>
@@ -63,8 +62,8 @@ export default (props) => {
       </div>
 
       <div className="char_div">
-        {characters.map((character) => {
-          return <Character character={character}></Character>;
+        {characters.map((character, index) => {
+          return <Character character={character} key={index}></Character>;
         })}
       </div>
     </>
