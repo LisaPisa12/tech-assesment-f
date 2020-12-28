@@ -8,14 +8,12 @@
 .film_info_container {
   display: flex;
   width: 100%;
-  margin-top: 10%;
-  padding-left: 10%;
+  margin-top: 0;
+  padding: 10%;
 }
 
 .film_info_left {
   flex: 1;
-}
-.film_info_left img {
   align-self: center;
 }
 
@@ -25,13 +23,18 @@
   align-items: flex-start;
   padding: 10%;
   margin: 0;
+  flex: 1;
 }
 .film_info_right p {
   text-align: left;
+}
+.film_info_right h3 {
+  margin: 0;
 }
 
 @media screen and (max-width: 800px) {
   .film_info_container {
     flex-direction: column;
+    margin-top: 10%;
   }
 }

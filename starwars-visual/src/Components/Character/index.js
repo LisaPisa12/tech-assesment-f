@@ -20,16 +20,17 @@ export default ({ character }) => {
 
   return (
     <div className="film_container">
-      <div className="char_img">
+      <div className="char_img film_info_left ">
         <img
           src={`https://starwars-visualguide.com/assets/img/characters/${getIdFromUrl(
             character.url
           )}.jpg`}
           alt=""
+          className="scroll_img"
         ></img>
       </div>
 
-      <div className="char_description">
+      <div className="char_description film_info_right">
         <h4>Name:{character.name}</h4>
         <h4> Height: {character.height}</h4>
         <h4> Mass: {character.mass}</h4>

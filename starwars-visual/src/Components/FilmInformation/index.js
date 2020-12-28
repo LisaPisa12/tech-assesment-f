@@ -46,9 +46,6 @@ export default (props) => {
           />
         </div>
         <div className="film_info_right">
-          <button disabled={disabled} onClick={() => addToFavoriteFilms(film)}>
-            Add to Fav
-          </button>
           <h3 className="film_title">{film.title}</h3>
           <h3 className="film_id">Episode ID: {film.episode_id}</h3>
           <h3 className="film_release">
@@ -59,6 +56,9 @@ export default (props) => {
 
           <h3 className="film_crawl">Opening Crawl:</h3>
           <p> {film.opening_crawl}</p>
+          <button disabled={disabled} onClick={() => addToFavoriteFilms(film)}>
+            Add to Fav
+          </button>
         </div>
       </div>
 
