@@ -18,26 +18,3 @@
 .char_container {
   margin: 10px;
 }
-/* .film_characters {
-  border: 2px solid white;
-  display: flex;
-  flex-direction: column;
-  padding: 5%;
-}
-.char_img img {
-  border-radius: 50%;
-  width: 50%;
-}
-
-.char_description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.char_description h4 {
-  margin: 0;
-}
-
-.film_container {
-  margin-bottom: 10%;
-} */

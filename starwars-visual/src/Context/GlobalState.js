@@ -1,8 +1,6 @@
 import React, { createContext, useReducer, useEffect } from "react";
 import AppReducer from "./AppReducer";
 
-//initial state
-
 const initialState = {
   favoriteFilms: localStorage.getItem("favoriteFilms")
     ? JSON.parse(localStorage.getItem("favoriteFilms"))
@@ -12,10 +10,8 @@ const initialState = {
     : [],
 };
 
-//create contextTypes
 export const GlobalContext = createContext(initialState);
 
-//Provider
 export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
@@ -27,7 +23,6 @@ export const GlobalProvider = (props) => {
     );
   }, [state]);
 
-  //Actions
   const addToFavoriteFilms = (film) => {
     dispatch({ type: "ADD_MOVIE_TO_FAVORITES", payload: film });
   };

@@ -11,9 +11,3 @@
   box-sizing: border-box;
   align-items: center;
 }
-
-@media screen and (max-width: 480px) {
-  .content {
-    height: auto !important;
-  }
-}
